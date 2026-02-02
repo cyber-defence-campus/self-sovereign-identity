@@ -1,2 +1,2 @@
 # self-sovereign-identity
-Research overview on self-sovereign-identity (SSI) solutions, e.g., the Swiss e-ID and the European EUDI.
+This page gives an overview on CYD Campus reseach activities on the area of self-sovereign-identity (SSI). Real-workd applications of SSI include the [Swiss e-ID](https://www.eid.admin.ch) and the European [EUDI](https://eudi.dev).
