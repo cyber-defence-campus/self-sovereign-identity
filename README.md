@@ -55,7 +55,7 @@ approaches are not practical enough for adoption in e-ID systems.
 In this thesis, we address the challenge of revoking verifiable credentials
 by proposing a privacy-preserving revocation scheme based on cryptographic
 accumulators, designed to be scalable for national e-ID systems. The scalability
-of the proposed scheme is not only limited to the Swiss e-ID instance
+of the proposed scheme is not limited to the Swiss e-ID instance
 but could also be extended to multi-national e-ID systems, such as those in
 the European Union.
 
