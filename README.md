@@ -46,7 +46,7 @@ unlinkable.
 In certain circumstances, governments may need to revoke some e-ID
 credentials, such as when the credential’s hosting device is lost or stolen,
 in cases of criminal prosecution, or if the security of the issuer has been
-compromised. Popular list-based revocations approaches are not privacypreserving,
+compromised. Popular list-based revocations approaches are not privacy-preserving,
 as they require the disclosure of unique identifiers, while unlinkable
 approaches are not practical enough for adoption in e-ID systems.
 In this thesis, we address the challenge of revoking verifiable credentials
