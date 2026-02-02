@@ -1,5 +1,5 @@
 # Introduction
-This page provides an overview on our reseach activities in the area of self-sovereign-identity (SSI). Real-world applications of the SSI paradigm include the [Swiss e-ID](https://www.eid.admin.ch) and the European [EUDI](https://eudi.dev).
+This page provides an overview of our reseach activities in the area of self-sovereign-identity (SSI). Real-world applications of the SSI paradigm include the [Swiss e-ID](https://www.eid.admin.ch) and the European [EUDI](https://eudi.dev).
 
 # Privacy-Preserving Presentation of Credentials
 
@@ -32,6 +32,34 @@ allow for much more complex verification logic.
 [Full report and sourceode...](https://github.com/mombelld/general-purpose-zkps-vcs)
 
 # Privacy-Preserving Revocation of Credentials
+
+<img src="images/Accumulators-applied-to-eID.png" width="600" />
+
+Electronic Identification (e-ID) is being increasingly adopted worldwide, as
+it offers a fast and reliable method for remote identity verification. When
+building national e-ID systems, governments often adhere to the principle of
+Self-Sovereign Identity (SSI), which requires citizens to have complete control
+over their identity data. This goal is typically achieved with verifiable
+credentials, which are digital tokens signed by the issuer (e.g., the government)
+and containing the identity information of the respective credential
+holder. Verifiable credentials allow holders to selectively disclose the information
+they wish to share, and ensure that subsequent disclosures remain
+unlinkable.
+In certain circumstances, governments may need to revoke some e-ID
+credentials, such as when the credential’s hosting device is lost or stolen,
+in cases of criminal prosecution, or if the security of the issuer has been
+compromised. Popular list-based revocations approaches are not privacypreserving,
+as they require the disclosure of unique identifiers, while unlinkable
+approaches are not practical enough for adoption in e-ID systems.
+In this thesis, we address the challenge of revoking verifiable credentials
+by proposing a privacy-preserving revocation scheme based on cryptographic
+accumulators, designed to be scalable for national e-ID systems. The scalability
+of the proposed scheme is not only limited to the Swiss e-ID instance
+but could also be extended to multi-national e-ID systems, such as those in
+the European Union.
+
+[Full report and sourceode...]([https://github.com/mombelld/general-purpose-zkps-vcs](https://github.com/alecolo129/eid-revocation-rs))
+
 
 # Distributed Key and Trust Management
 
