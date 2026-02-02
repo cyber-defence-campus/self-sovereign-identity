@@ -3,6 +3,32 @@ This page provides an overview on our reseach activities in the area of self-sov
 
 # Privacy-Preserving Presentation of Credentials
 
+The Swiss Confederation has been tasked with developing the Swiss
+e-ID, an infrastructure for digital identities, following the principles of
+SSI, which enforce strong privacy requirements. These requirements
+are, however, hard to achieve with classical, standard methods such
+as ECDSA signatures. Recently, verifiable credentials based on zeroknowledge
+proofs have been proposed as an alternative to achieve
+higher privacy guarantees. In this thesis, we study the feasibility of
+implementing flexible, privacy-preserving verification logic for anonymous
+credentials using general-purpose zero-knowledge proofs. We
+provide an overview, comparison, and performance analysis of stateof-
+the-art zero-knowledge frameworks, and we design flexible credential
+verification logic using arithmetic circuits. We then implement a
+proof-of-concept framework for anonymous credentials based on zk-
+SNARKs and integrate it into the Swiss e-ID infrastructure. Our work
+highlights the flexibility of this approach, for example, we can seamlessly
+prove properties of values that were computed, or aggregated,
+from claims of multiple linked credentials. We also uncover issues and
+limitations of current zero-knowledge frameworks, especially regarding
+performance. For these, we indicate possible ways in which they
+could be addressed by future work. We show that this approach is
+practical with current technologies for reasonably complex statements,
+such as validating a credential, while future research is very likely to
+allow for much more complex verification logic.
+
+[Full report and sourceode...](https://github.com/mombelld/general-purpose-zkps-vcs)
+
 # Privacy-Preserving Revocation of Credentials
 
 # Distributed Key and Trust Management
