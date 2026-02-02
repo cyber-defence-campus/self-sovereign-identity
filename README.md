@@ -63,6 +63,21 @@ the European Union.
 
 # Distributed Key and Trust Management
 
+## KERI: A Use-Case Study for the Swiss e-ID
+<img src="images/E-ID-network-using-KERI.png" width="600" />
+
+This thesis presents an overview and an analysis of the distributed key
+management system KERI (Key Event Receipt Infrastructure) and its
+ecosystem with a focus on security and scalability. With the goal of
+providing the basis for a digital identity system for Switzerland, a KERI
+Network model is proposed and analyzed. The model is run on a large
+network of up to 10’000 users, the first time KERI has been tested at
+this scale. By using the keriox rust library we also contributed to its
+development. The final recommendation is that KERI is not suitable for
+the use in the Swiss e-ID base registry.
+
+[Full report and sourcecode...](https://github.com/luffa99/KERI-Under-Scrutiny-Master-Thesis/)
+
 # Security Testing 
 
 ## SWIYU Infrastructure
