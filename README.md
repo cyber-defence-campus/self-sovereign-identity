@@ -33,7 +33,8 @@ development team. More than half of our findings have already been fixed or acce
 beta. The development team is currently working on the other, still open, findings. This thesis makes
 a direct contribution to enhancing the security of the upcoming Swiss e-ID.
 
-[Full report...](https://github.com/user-attachments/files/21157739/Security_Analysis_of_the_Swiss_e_ID___Trust_Infrastructure.pdf)
+* [Full report...](https://github.com/user-attachments/files/21157739/Security_Analysis_of_the_Swiss_e_ID___Trust_Infrastructure.pdf)
+* [Presentation in public e-ID participation meeting from July 2025 (YouTube)](https://youtu.be/ASgnpElZsk0?si=IzKH53iatFxuzroD&t=2663)
 
 
 # Privacy Preservation
