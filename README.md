@@ -1,35 +1,44 @@
 # Introduction
 This page provides an overview of our reseach activities in the area of self-sovereign-identity (SSI). Real-world applications of the SSI paradigm include the [Swiss e-ID](https://www.eid.admin.ch) and the European [EUDI](https://eudi.dev).
 
-# Privacy-Preserving Presentation of Credentials
+# Social Vault Recovery
+<img src="images/Apollo-Overview.png" width="600" />
 
-<img src="images/Proving-Code-Execution-with-ZKP.png" width="800" />
+Social key recovery mechanisms enable users to recover their vaults with the help of trusted contacts, or trustees,
+avoiding the need for a single point of trust or memorizing complex strings. However, existing mechanisms overlook the
+memorability demands on users for recovery, such as the need to recall a threshold number of trustees. Therefore, we first
+formalize the notion of recovery metadata in the context of social key recovery, illustrating the tradeoff between easing
+the burden of memorizing the metadata and maintaining metadata privacy. We present Apollo, the first framework
+that addresses this tradeoff by distributing indistinguishable data within a user’s social circle, where trustees hold relevant
+data and non-trustees store random data. Apollo eliminates the need to memorize recovery metadata since a user eventually
+gathers sufficient data from her social circle for recovery. Due to indistinguishability, Apollo protects metadata privacy by
+forming an anonymity set that hides the trustees among non-trustees. To make the anonymity set scalable, Apollo proposes
+a novel multi-layered secret sharing scheme that mitigates the overhead due to the random data distributed among non-trustees. 
 
-The Swiss Confederation has been tasked with developing the Swiss
-e-ID, an infrastructure for digital identities, following the principles of
-SSI, which enforce strong privacy requirements. These requirements
-are, however, hard to achieve with classical, standard methods such
-as ECDSA signatures. Recently, verifiable credentials based on zeroknowledge
-proofs have been proposed as an alternative to achieve
-higher privacy guarantees. In this thesis, we study the feasibility of
-implementing flexible, privacy-preserving verification logic for anonymous
-credentials using general-purpose zero-knowledge proofs. We
-provide an overview, comparison, and performance analysis of stateof-
-the-art zero-knowledge frameworks, and we design flexible credential
-verification logic using arithmetic circuits. We then implement a
-proof-of-concept framework for anonymous credentials based on zk-
-SNARKs and integrate it into the Swiss e-ID infrastructure. Our work
-highlights the flexibility of this approach, for example, we can seamlessly
-prove properties of values that were computed, or aggregated,
-from claims of multiple linked credentials. We also uncover issues and
-limitations of current zero-knowledge frameworks, especially regarding
-performance. For these, we indicate possible ways in which they
-could be addressed by future work. We show that this approach is
-practical with current technologies for reasonably complex statements,
-such as validating a credential, while future research is very likely to
-allow for much more complex verification logic.
+[Full report...](https://arxiv.org/abs/2507.19484)
 
-[Full report and sourceode...](https://github.com/mombelld/general-purpose-zkps-vcs)
+# Security Testing 
+
+## SWIYU Infrastructure
+<img src="images/forge_credential_mindmap.png" width="800" />
+
+The Swiss government is currently working on developing a trust infrastructure for the future Swiss
+digital identity (e-ID). They build an ecosystem based on the newly proposed principle called Self
+Sovereign Identity (SSI). This new principle ensures high privacy for its users. The implementation
+will soon be used nationwide as the foundation of the e-ID. Thus, the trust infrastructure must be
+implemented securely. This thesis conducts a rigorous security analysis of the Swiss trust infrastructure.
+In particular, we develop a threatmodel for each component of the ecosystem and attack
+trees for the most essential security goals. The attack trees are then used to guide the source code
+analysis for vulnerability detection. Although the European Union is currently working on a similar
+project, to our knowledge, there have been no noteworthy research studies that have performed
+systematic security analysis of such nationwide SSI implementations with a centralised registry. We
+found more than 90 vulnerabilities and supported their remediation in direct collaboration with the
+development team. More than half of our findings have already been fixed or accepted for public
+beta. The development team is currently working on the other, still open, findings. This thesis makes
+a direct contribution to enhancing the security of the upcoming Swiss e-ID.
+
+[Full report...](https://github.com/user-attachments/files/21157739/Security_Analysis_of_the_Swiss_e_ID___Trust_Infrastructure.pdf)
+
 
 # Privacy-Preserving Revocation of Credentials
 
@@ -60,6 +69,36 @@ the European Union.
 
 [Full report and sourceode...](https://github.com/alecolo129/eid-revocation-rs)
 
+
+# Privacy-Preserving Presentation of Credentials
+
+<img src="images/Proving-Code-Execution-with-ZKP.png" width="800" />
+
+The Swiss Confederation has been tasked with developing the Swiss
+e-ID, an infrastructure for digital identities, following the principles of
+SSI, which enforce strong privacy requirements. These requirements
+are, however, hard to achieve with classical, standard methods such
+as ECDSA signatures. Recently, verifiable credentials based on zeroknowledge
+proofs have been proposed as an alternative to achieve
+higher privacy guarantees. In this thesis, we study the feasibility of
+implementing flexible, privacy-preserving verification logic for anonymous
+credentials using general-purpose zero-knowledge proofs. We
+provide an overview, comparison, and performance analysis of stateof-
+the-art zero-knowledge frameworks, and we design flexible credential
+verification logic using arithmetic circuits. We then implement a
+proof-of-concept framework for anonymous credentials based on zk-
+SNARKs and integrate it into the Swiss e-ID infrastructure. Our work
+highlights the flexibility of this approach, for example, we can seamlessly
+prove properties of values that were computed, or aggregated,
+from claims of multiple linked credentials. We also uncover issues and
+limitations of current zero-knowledge frameworks, especially regarding
+performance. For these, we indicate possible ways in which they
+could be addressed by future work. We show that this approach is
+practical with current technologies for reasonably complex statements,
+such as validating a credential, while future research is very likely to
+allow for much more complex verification logic.
+
+[Full report and sourceode...](https://github.com/mombelld/general-purpose-zkps-vcs)
 
 # Distributed Key and Trust Management
 
@@ -99,43 +138,4 @@ guarantees. Some of its ideas and philosophy can however be integrated
 into the system to fulfill the requirements set by the Swiss federation.
 
 [Full report...](https://doi.org/10.3929/ethz-b-000735690)
-
-# Security Testing 
-
-## SWIYU Infrastructure
-<img src="images/forge_credential_mindmap.png" width="800" />
-
-The Swiss government is currently working on developing a trust infrastructure for the future Swiss
-digital identity (e-ID). They build an ecosystem based on the newly proposed principle called Self
-Sovereign Identity (SSI). This new principle ensures high privacy for its users. The implementation
-will soon be used nationwide as the foundation of the e-ID. Thus, the trust infrastructure must be
-implemented securely. This thesis conducts a rigorous security analysis of the Swiss trust infrastructure.
-In particular, we develop a threatmodel for each component of the ecosystem and attack
-trees for the most essential security goals. The attack trees are then used to guide the source code
-analysis for vulnerability detection. Although the European Union is currently working on a similar
-project, to our knowledge, there have been no noteworthy research studies that have performed
-systematic security analysis of such nationwide SSI implementations with a centralised registry. We
-found more than 90 vulnerabilities and supported their remediation in direct collaboration with the
-development team. More than half of our findings have already been fixed or accepted for public
-beta. The development team is currently working on the other, still open, findings. This thesis makes
-a direct contribution to enhancing the security of the upcoming Swiss e-ID.
-
-[Full report...](https://github.com/user-attachments/files/21157739/Security_Analysis_of_the_Swiss_e_ID___Trust_Infrastructure.pdf)
-
-
-# Social Vault Recovery
-<img src="images/Apollo-Overview.png" width="600" />
-
-Social key recovery mechanisms enable users to recover their vaults with the help of trusted contacts, or trustees,
-avoiding the need for a single point of trust or memorizing complex strings. However, existing mechanisms overlook the
-memorability demands on users for recovery, such as the need to recall a threshold number of trustees. Therefore, we first
-formalize the notion of recovery metadata in the context of social key recovery, illustrating the tradeoff between easing
-the burden of memorizing the metadata and maintaining metadata privacy. We present Apollo, the first framework
-that addresses this tradeoff by distributing indistinguishable data within a user’s social circle, where trustees hold relevant
-data and non-trustees store random data. Apollo eliminates the need to memorize recovery metadata since a user eventually
-gathers sufficient data from her social circle for recovery. Due to indistinguishability, Apollo protects metadata privacy by
-forming an anonymity set that hides the trustees among non-trustees. To make the anonymity set scalable, Apollo proposes
-a novel multi-layered secret sharing scheme that mitigates the overhead due to the random data distributed among non-trustees. 
-
-[Full report...](https://arxiv.org/abs/2507.19484)
 
