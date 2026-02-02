@@ -65,6 +65,27 @@ the European Union.
 
 # Security Testing 
 
+## SWIYU Infrastructure
+<img src="images/forge_credential_mindmap.png" width="800" />
+
+The Swiss government is currently working on developing a trust infrastructure for the future Swiss
+digital identity (e-ID). They build an ecosystem based on the newly proposed principle called Self
+Sovereign Identity (SSI). This new principle ensures high privacy for its users. The implementation
+will soon be used nationwide as the foundation of the e-ID. Thus, the trust infrastructure must be
+implemented securely. This thesis conducts a rigorous security analysis of the Swiss trust infrastructure.
+In particular, we develop a threatmodel for each component of the ecosystem and attack
+trees for the most essential security goals. The attack trees are then used to guide the source code
+analysis for vulnerability detection. Although the European Union is currently working on a similar
+project, to our knowledge, there have been no noteworthy research studies that have performed
+systematic security analysis of such nationwide SSI implementations with a centralised registry. We
+found more than 90 vulnerabilities and supported their remediation in direct collaboration with the
+development team. More than half of our findings have already been fixed or accepted for public
+beta. The development team is currently working on the other, still open, findings. This thesis makes
+a direct contribution to enhancing the security of the upcoming Swiss e-ID.
+
+[Full report...](https://github.com/user-attachments/files/21157739/Security_Analysis_of_the_Swiss_e_ID___Trust_Infrastructure.pdf)
+
+
 # Social Vault Recovery
 <img src="images/Apollo-Overview.png" width="600" />
 
