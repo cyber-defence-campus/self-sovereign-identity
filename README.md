@@ -78,6 +78,28 @@ the use in the Swiss e-ID base registry.
 
 [Full report and sourcecode...](https://github.com/luffa99/KERI-Under-Scrutiny-Master-Thesis/)
 
+## KERI: A Security Analysis
+<img src="images/Attacks-against-controller.png" width="600" />
+
+In recent years, the Swiss government has been working towards the implementation of an electronic identity (e-ID) system based on the principles of Self-Sovereign Identity. The Key Event Receipt Infrastructure
+(KERI) has been considered as one of the possible technologies to use
+in this project. This work describes KERI and analyzes the security
+properties it provides to its users both in the role of controllers and of
+validators. It provides insights on the inner functioning of KERI’s Algorithm for Witness Agreement (KAWA) and analyzes it in terms typically
+associated with distributed consensus protocols. We also describe a way
+to instantiate the validating side of the network based on the federated
+voting process from the Stellar Consensus Protocol that can provide significant safety and liveness guarantees for validators. Finally, we explore
+the possibility of adopting KERI and its custom credential format ACDC
+for the implementation of the Swiss e-ID system.
+Our work shows KAWA provides sufficient security guarantees to honest
+controllers, while the validating side needs the help of strong governance
+and monitoring to protect validators from malicious actors. We also conclude that KERI, at the point it is today, is not suitable to be used within
+the Swiss e-ID for reasons related to its high complexity and weak privacy
+guarantees. Some of its ideas and philosophy can however be integrated
+into the system to fulfill the requirements set by the Swiss federation.
+
+[Full report...](https://doi.org/10.3929/ethz-b-000735690)
+
 # Security Testing 
 
 ## SWIYU Infrastructure
