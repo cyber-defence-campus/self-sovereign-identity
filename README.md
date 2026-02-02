@@ -3,6 +3,8 @@ This page provides an overview on our reseach activities in the area of self-sov
 
 # Privacy-Preserving Presentation of Credentials
 
+<img src="images/Proving-Code-Execution-with-ZKP.png" width="800" />
+
 The Swiss Confederation has been tasked with developing the Swiss
 e-ID, an infrastructure for digital identities, following the principles of
 SSI, which enforce strong privacy requirements. These requirements
