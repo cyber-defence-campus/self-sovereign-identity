@@ -36,7 +36,9 @@ a direct contribution to enhancing the security of the upcoming Swiss e-ID.
 [Full report...](https://github.com/user-attachments/files/21157739/Security_Analysis_of_the_Swiss_e_ID___Trust_Infrastructure.pdf)
 
 
-# Privacy-Preserving Revocation of Credentials
+# Privacy Preservation
+
+## Revocation of Credentials
 
 <img src="images/Accumulators-applied-to-eID.png" width="600" />
 
@@ -59,7 +61,7 @@ the European Union.
 [Full report and sourceode...](https://github.com/alecolo129/eid-revocation-rs)
 
 
-# Privacy-Preserving Presentation of Credentials
+## Presentation of Credentials
 
 <img src="images/Proving-Code-Execution-with-ZKP.png" width="800" />
 
