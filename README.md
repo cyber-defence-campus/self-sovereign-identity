@@ -22,12 +22,8 @@ a novel multi-layered secret sharing scheme that mitigates the overhead due to t
 ## SWIYU Infrastructure
 <img src="images/forge_credential_mindmap.png" width="800" />
 
-The Swiss government is currently working on developing a trust infrastructure for the future Swiss
-digital identity (e-ID). They build an ecosystem based on the newly proposed principle called Self
-Sovereign Identity (SSI). This new principle ensures high privacy for its users. The implementation
-will soon be used nationwide as the foundation of the e-ID. Thus, the trust infrastructure must be
-implemented securely. This thesis conducts a rigorous security analysis of the Swiss trust infrastructure.
-In particular, we develop a threatmodel for each component of the ecosystem and attack
+This thesis conducts a rigorous security analysis of the Swiss trust infrastructure.
+In particular, we develop a threat model for each component of the ecosystem and attack
 trees for the most essential security goals. The attack trees are then used to guide the source code
 analysis for vulnerability detection. Although the European Union is currently working on a similar
 project, to our knowledge, there have been no noteworthy research studies that have performed
@@ -44,14 +40,7 @@ a direct contribution to enhancing the security of the upcoming Swiss e-ID.
 
 <img src="images/Accumulators-applied-to-eID.png" width="600" />
 
-Electronic Identification (e-ID) is being increasingly adopted worldwide, as
-it offers a fast and reliable method for remote identity verification. When
-building national e-ID systems, governments often adhere to the principle of
-Self-Sovereign Identity (SSI), which requires citizens to have complete control
-over their identity data. This goal is typically achieved with verifiable
-credentials, which are digital tokens signed by the issuer (e.g., the government)
-and containing the identity information of the respective credential
-holder. Verifiable credentials allow holders to selectively disclose the information
+Verifiable credentials allow holders to selectively disclose the information
 they wish to share, and ensure that subsequent disclosures remain
 unlinkable.
 In certain circumstances, governments may need to revoke some e-ID
@@ -74,13 +63,7 @@ the European Union.
 
 <img src="images/Proving-Code-Execution-with-ZKP.png" width="800" />
 
-The Swiss Confederation has been tasked with developing the Swiss
-e-ID, an infrastructure for digital identities, following the principles of
-SSI, which enforce strong privacy requirements. These requirements
-are, however, hard to achieve with classical, standard methods such
-as ECDSA signatures. Recently, verifiable credentials based on zeroknowledge
-proofs have been proposed as an alternative to achieve
-higher privacy guarantees. In this thesis, we study the feasibility of
+In this thesis, we study the feasibility of
 implementing flexible, privacy-preserving verification logic for anonymous
 credentials using general-purpose zero-knowledge proofs. We
 provide an overview, comparison, and performance analysis of stateof-
@@ -120,9 +103,7 @@ the use in the Swiss e-ID base registry.
 ## KERI: A Security Analysis
 <img src="images/Attacks-against-controller.png" width="600" />
 
-In recent years, the Swiss government has been working towards the implementation of an electronic identity (e-ID) system based on the principles of Self-Sovereign Identity. The Key Event Receipt Infrastructure
-(KERI) has been considered as one of the possible technologies to use
-in this project. This work describes KERI and analyzes the security
+This work describes KERI and analyzes the security
 properties it provides to its users both in the role of controllers and of
 validators. It provides insights on the inner functioning of KERI’s Algorithm for Witness Agreement (KAWA) and analyzes it in terms typically
 associated with distributed consensus protocols. We also describe a way
