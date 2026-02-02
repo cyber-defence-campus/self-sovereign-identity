@@ -58,7 +58,7 @@ of the proposed scheme is not only limited to the Swiss e-ID instance
 but could also be extended to multi-national e-ID systems, such as those in
 the European Union.
 
-[Full report and sourceode...]([https://github.com/mombelld/general-purpose-zkps-vcs](https://github.com/alecolo129/eid-revocation-rs))
+[Full report and sourceode...](https://github.com/alecolo129/eid-revocation-rs)
 
 
 # Distributed Key and Trust Management
