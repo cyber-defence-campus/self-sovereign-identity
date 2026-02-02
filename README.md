@@ -66,7 +66,7 @@ the European Union.
 In this thesis, we study the feasibility of
 implementing flexible, privacy-preserving verification logic for anonymous
 credentials using general-purpose zero-knowledge proofs. We
-provide an overview, comparison, and performance analysis of stateof-
+provide an overview, comparison, and performance analysis of state-of-
 the-art zero-knowledge frameworks, and we design flexible credential
 verification logic using arithmetic circuits. We then implement a
 proof-of-concept framework for anonymous credentials based on zk-
