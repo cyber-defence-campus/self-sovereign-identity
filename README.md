@@ -1,7 +1,7 @@
 # Introduction
 This repository presents our research on **self-sovereign identity (SSI)**, with a focus on building secure, privacy-preserving, and scalable digital identity systems. SSI shifts control over digital identities to users and underpins emerging real-world deployments such as the [Swiss e-ID](https://www.eid.admin.ch) and the European [EUDI](https://eudi.dev).
 
-Our work covers key challenges across the SSI stack: social key recovery for identity vaults, systematic security testing of national e-ID infrastructures, privacy-preserving credential revocation and presentation, and distributed key and trust management. Several projects are evaluated at scale or directly applied to the Swiss e-ID ecosystem. Together, these efforts aim to identify practical limitations of current approaches and inform the design of future national and cross-border digital identity systems.
+Our work covers key challenges across the SSI stack: key recovery for identity vaults, security testing of national e-ID infrastructures, privacy-preserving credential revocation and presentation, and distributed key and trust management. Several projects are evaluated at scale or directly applied to the Swiss e-ID ecosystem. Together, these efforts aim to identify practical limitations of current approaches and inform the design of future national and cross-border digital identity systems.
 
 ## Focus Topics
 
