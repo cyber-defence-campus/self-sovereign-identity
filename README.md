@@ -1,20 +1,20 @@
 # Introduction
-This repository presents our research on **self-sovereign identity (SSI)**, with a focus on building secure, privacy-preserving, and scalable digital identity systems. SSI shifts control over digital identities to users and underpins emerging real-world deployments such as the [Swiss e-ID](https://www.eid.admin.ch) and the European [EUDI](https://eudi.dev).
+This repository presents research at the [Cyber-Defence Campus](https://www.cydcampus.admin.ch/en) on **self-sovereign identity (SSI)**, with a focus on building secure, privacy-preserving, and scalable digital identity systems. SSI shifts control over digital identities to users and underpins emerging real-world deployments such as the [Swiss e-ID](https://www.eid.admin.ch) and the European [EUDI](https://eudi.dev).
 
-Our work covers key challenges across the SSI stack: key recovery for identity vaults, security testing of national e-ID infrastructures, privacy-preserving credential revocation and presentation, and distributed key and trust management. Several projects are evaluated at scale or directly applied to the Swiss e-ID ecosystem. Together, these efforts aim to identify practical limitations of current approaches and inform the design of future national and cross-border digital identity systems.
+Our work covers important challenges across the SSI stack: key recovery for identity vaults, security testing of national e-ID infrastructures, privacy-preserving credential revocation and presentation, and distributed key and trust management. Several projects are evaluated at scale or directly applied to the Swiss e-ID ecosystem. Together, our efforts identify practical limitations of current approaches and inform the design of future national and cross-border digital identity systems.
 
 ## Focus Topics
 
 **[Security Testing](#security-testing)**  
 
 Security testing involves threat modeling, creation of attack trees, and vulnerability analysis of the Swiss e-ID trust infrastructure.
-The security of protocols, implementations and mobile platforms is scrutinized. 
+We scrutinized the security of protocols, implementations and mobile platforms. 
 
 
 **[Privacy Preservation](#privacy-preservation)**  
 
 Unlinkability of credential presentations is an important goal in the design of verifiable credential systems. That is, verifiers must not be
-able to determine whether two anonymous credential presesentations, e.g., proving legal age, belong to the same user or not. 
+able to determine whether two anonymous credential presentations, e.g., proving legal age, belong to the same user or not. 
 An even stronger notion of unlinkability retains anonymity of users even if issuers and verifiers collude to deanonymize presentations.
 Achieving unlinkability is challenging, because static public keys, hashes, signatures or network metadata typically allow tracking of users across different credential presentations.
 
@@ -24,6 +24,9 @@ Achieving unlinkability is challenging, because static public keys, hashes, sign
 Key management is the foundation of secure distributed systems. Social key recovery mechanisms are studied and the *Apollo* framework for usable and privacy-preserving vault recovery is presented.
 Moreover, [KERI](https://keri.one/) (Key Event Receipt Infrastructure), a fully decentralized identity system, is analyzed in terms of use cases and security. In KERI, keys are controlled by users and 
 a system of witnesses and watchers enables users to manage trust in a distributed way.
+
+## Contact
+For questions, collaborations, or access to additional materials, please contact us through cydcampus@ar.admin.ch
 
 
 # Security Testing 
@@ -36,14 +39,14 @@ In particular, we develop a threat model for each component of the ecosystem and
 trees for the most essential security goals. The attack trees are then used to guide the source code
 analysis for vulnerability detection. Although the European Union is currently working on a similar
 project, to our knowledge, there have been no noteworthy research studies that have performed
-systematic security analysis of such nationwide SSI implementations with a centralised registry. We
+systematic security analysis of such nationwide SSI implementations with a centralized registry. We
 found more than 90 vulnerabilities and supported their remediation in direct collaboration with the
 development team. More than half of our findings have already been fixed or accepted for public
 beta. The development team is currently working on the other, still open, findings. This thesis makes
 a direct contribution to enhancing the security of the upcoming Swiss e-ID.
 
-* [Full report...](https://github.com/user-attachments/files/21157739/Security_Analysis_of_the_Swiss_e_ID___Trust_Infrastructure.pdf)
-* [Presentation in public e-ID participation meeting from July 2025 (YouTube)](https://youtu.be/ASgnpElZsk0?si=IzKH53iatFxuzroD&t=2663)
+* 📄 [Full report](https://github.com/user-attachments/files/21157739/Security_Analysis_of_the_Swiss_e_ID___Trust_Infrastructure.pdf)
+* ▶️ [Presentation in public e-ID participation meeting from July 2025 (YouTube)](https://youtu.be/ASgnpElZsk0?si=IzKH53iatFxuzroD&t=2663)
 
 
 # Privacy Preservation
@@ -58,7 +61,7 @@ unlinkable.
 In certain circumstances, governments may need to revoke some e-ID
 credentials, such as when the credential’s hosting device is lost or stolen,
 in cases of criminal prosecution, or if the security of the issuer has been
-compromised. Popular list-based revocations approaches are not privacy-preserving,
+compromised. Popular list-based revocation-approaches are not privacy-preserving,
 as they require the disclosure of unique identifiers, while unlinkable
 approaches are not practical enough for adoption in e-ID systems.
 In this thesis, we address the challenge of revoking verifiable credentials
@@ -68,7 +71,7 @@ of the proposed scheme is not limited to the Swiss e-ID instance
 but could also be extended to multi-national e-ID systems, such as those in
 the European Union.
 
-[Full report and sourceode...](https://github.com/alecolo129/eid-revocation-rs)
+📄💻 [Full report and sourcode](https://github.com/alecolo129/eid-revocation-rs)
 
 
 ## Presentation of Credentials
@@ -93,7 +96,7 @@ practical with current technologies for reasonably complex statements,
 such as validating a credential, while future research is very likely to
 allow for much more complex verification logic.
 
-[Full report and sourceode...](https://github.com/mombelld/general-purpose-zkps-vcs)
+📄💻 [Full report and sourcode](https://github.com/mombelld/general-purpose-zkps-vcs)
 
 # Distributed Key and Trust Management
 
@@ -111,7 +114,7 @@ gathers sufficient data from her social circle for recovery. Due to indistinguis
 forming an anonymity set that hides the trustees among non-trustees. To make the anonymity set scalable, Apollo proposes
 a novel multi-layered secret sharing scheme that mitigates the overhead due to the random data distributed among non-trustees. 
 
-[Full report...](https://arxiv.org/abs/2507.19484)
+📄 [Full report](https://arxiv.org/abs/2507.19484)
 
 
 ## KERI: A Use-Case Study for the Swiss e-ID
@@ -127,7 +130,7 @@ this scale. By using the keriox rust library we also contributed to its
 development. The final recommendation is that KERI is not suitable for
 the use in the Swiss e-ID base registry.
 
-[Full report and sourcecode...](https://github.com/luffa99/KERI-Under-Scrutiny-Master-Thesis/)
+📄💻 [Full report and sourcecode](https://github.com/luffa99/KERI-Under-Scrutiny-Master-Thesis/)
 
 ## KERI: A Security Analysis
 <img src="images/Attacks-against-controller.png" width="600" />
@@ -140,12 +143,12 @@ to instantiate the validating side of the network based on the federated
 voting process from the Stellar Consensus Protocol that can provide significant safety and liveness guarantees for validators. Finally, we explore
 the possibility of adopting KERI and its custom credential format ACDC
 for the implementation of the Swiss e-ID system.
-Our work shows KAWA provides sufficient security guarantees to honest
+Our work shows that KAWA provides sufficient security guarantees to honest
 controllers, while the validating side needs the help of strong governance
 and monitoring to protect validators from malicious actors. We also conclude that KERI, at the point it is today, is not suitable to be used within
 the Swiss e-ID for reasons related to its high complexity and weak privacy
 guarantees. Some of its ideas and philosophy can however be integrated
 into the system to fulfill the requirements set by the Swiss federation.
 
-[Full report...](https://doi.org/10.3929/ethz-b-000735690)
+📄 [Full report](https://doi.org/10.3929/ethz-b-000735690)
 
