@@ -22,7 +22,7 @@ Achieving unlinkability is challenging, because static public keys, hashes or si
 **[Distributed Key and Trust Management](#distributed-key-and-trust-management)**
 
 Key management is the foundation of secure distributed systems. Social key recovery mechanisms are studied and the *Apollo* framework for usable and privacy-preserving vault recovery is presented.
-Moreover, [KERI](https://keri.one/) (Key Event Receipt Infrastructure), a fully decentralized identity system, is analyzes in terms of use cases and  security. In KERI, keys are controlled by users and 
+Moreover, [KERI](https://keri.one/) (Key Event Receipt Infrastructure), a fully decentralized identity system, is analyzed in terms of use cases and security. In KERI, keys are controlled by users and 
 a system of witnesses and watchers enables users to manage trust in a distributed way.
 
 
