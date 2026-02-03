@@ -3,22 +3,27 @@ This repository presents our research on **self-sovereign identity (SSI)**, with
 
 Our work covers key challenges across the SSI stack: social key recovery for identity vaults, systematic security testing of national e-ID infrastructures, privacy-preserving credential revocation and presentation, and distributed key and trust management. Several projects are evaluated at scale or directly applied to the Swiss e-ID ecosystem. Together, these efforts aim to identify practical limitations of current approaches and inform the design of future national and cross-border digital identity systems.
 
+## Focus Topics
 
-# Social Vault Recovery
-<img src="images/Apollo-Overview.png" width="600" />
+**[Security Testing](#security-testing)**  
 
-Social key recovery mechanisms enable users to recover their vaults with the help of trusted contacts, or trustees,
-avoiding the need for a single point of trust or memorizing complex strings. However, existing mechanisms overlook the
-memorability demands on users for recovery, such as the need to recall a threshold number of trustees. Therefore, we first
-formalize the notion of recovery metadata in the context of social key recovery, illustrating the tradeoff between easing
-the burden of memorizing the metadata and maintaining metadata privacy. We present Apollo, the first framework
-that addresses this tradeoff by distributing indistinguishable data within a user’s social circle, where trustees hold relevant
-data and non-trustees store random data. Apollo eliminates the need to memorize recovery metadata since a user eventually
-gathers sufficient data from her social circle for recovery. Due to indistinguishability, Apollo protects metadata privacy by
-forming an anonymity set that hides the trustees among non-trustees. To make the anonymity set scalable, Apollo proposes
-a novel multi-layered secret sharing scheme that mitigates the overhead due to the random data distributed among non-trustees. 
+Security testing involves threat modeling, creation of attack trees, and vulnerability analysis of the Swiss e-ID trust infrastructure.
+The security of protocols, implementations and mobile platforms is scrutinized. 
 
-[Full report...](https://arxiv.org/abs/2507.19484)
+
+**[Privacy Preservation](#privacy-preservation)**  
+
+Unlinkability of credential presentations is an important goal in the design of e-ID systems. That is, verifiers must not be
+able to determine whether two anonymous credential presesentations, e.g., proving legal age, belong to the same user or not. 
+Static public keys, hashes or signatures typically allow tracking of users across different credential presentations.
+An even stronger notion of unlinkability retains anonymity of users even if issuers and verifiers collude to deanonymize presentations.
+
+**[Distributed Key and Trust Management](#distributed-key-and-trust-management)**
+
+Key management is the foundation of secure distributed systems. Social key recovery mechanisms are studied and the *Apollo* framework for usable and privacy-preserving vault recovery is presented.
+Moreover, [KERI](https://keri.one/) (Key Event Receipt Infrastructure), a fully decentralized identity system, is analyzes in terms of use cases and  security. In KERI, keys are controlled by users and 
+a system of witnesses and watchers enables users to manage trust in a distributed way.
+
 
 # Security Testing 
 
@@ -90,6 +95,23 @@ allow for much more complex verification logic.
 [Full report and sourceode...](https://github.com/mombelld/general-purpose-zkps-vcs)
 
 # Distributed Key and Trust Management
+
+## Social Vault Recovery with Apollo
+<img src="images/Apollo-Overview.png" width="600" />
+
+Social key recovery mechanisms enable users to recover their vaults with the help of trusted contacts, or trustees,
+avoiding the need for a single point of trust or memorizing complex strings. However, existing mechanisms overlook the
+memorability demands on users for recovery, such as the need to recall a threshold number of trustees. Therefore, we first
+formalize the notion of recovery metadata in the context of social key recovery, illustrating the tradeoff between easing
+the burden of memorizing the metadata and maintaining metadata privacy. We present Apollo, the first framework
+that addresses this tradeoff by distributing indistinguishable data within a user’s social circle, where trustees hold relevant
+data and non-trustees store random data. Apollo eliminates the need to memorize recovery metadata since a user eventually
+gathers sufficient data from her social circle for recovery. Due to indistinguishability, Apollo protects metadata privacy by
+forming an anonymity set that hides the trustees among non-trustees. To make the anonymity set scalable, Apollo proposes
+a novel multi-layered secret sharing scheme that mitigates the overhead due to the random data distributed among non-trustees. 
+
+[Full report...](https://arxiv.org/abs/2507.19484)
+
 
 ## KERI: A Use-Case Study for the Swiss e-ID
 <img src="images/E-ID-network-using-KERI.png" width="600" />
