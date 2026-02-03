@@ -15,8 +15,9 @@ The security of protocols, implementations and mobile platforms is scrutinized.
 
 Unlinkability of credential presentations is an important goal in the design of e-ID systems. That is, verifiers must not be
 able to determine whether two anonymous credential presesentations, e.g., proving legal age, belong to the same user or not. 
-Static public keys, hashes or signatures typically allow tracking of users across different credential presentations.
 An even stronger notion of unlinkability retains anonymity of users even if issuers and verifiers collude to deanonymize presentations.
+Achieving unlinkability is challenging, because static public keys, hashes or signatures typically allow tracking of users across different credential presentations.
+
 
 **[Distributed Key and Trust Management](#distributed-key-and-trust-management)**
 
