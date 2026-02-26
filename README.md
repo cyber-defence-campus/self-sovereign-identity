@@ -67,7 +67,7 @@ revocation of anonymity through a multi-party protocol with democratic checks an
 CFT design variants and present conservative performance estimates based on state-of-the-art cryptographic primitives,
 demonstrating that practical, privacy-preserving accountability mechanisms are within reach.
 
-* 📄 [Full report](https://eprint.iacr.org/2026/389)
+📄 [Full report](https://eprint.iacr.org/2026/389)
 
 
 ## Revocation of Credentials
