@@ -51,6 +51,21 @@ a direct contribution to enhancing the security of the upcoming Swiss e-ID.
 
 # Privacy Preservation
 
+## Accountability for Anonymous Credentials
+
+Anonymous credential systems have been a subject of research for decades but have seen limited adoption in practical deployments.
+With the rise of national electronic identity frameworks in the EU and Switzerland, this may change soon. 
+Achieving perfect unlinkability—resilient even
+against collusion between issuers and verifiers—remains an open challenge in practice, constrained by current performance
+and standardization limitations. However, these barriers are likely to diminish as the technology matures.
+Once unlinkability approaches this ideal, a new challenge becomes central: accountability. Fully unlinkable systems can
+be misused, for example, by malicious users reselling identity proofs. We argue that accountability must be an integral part
+of system design to preempt political pressures to weaken privacy guarantees for all citizens.
+To address this, we introduce the cryptographic forensic trail (CFT), a mechanism enabling controlled and transparent
+revocation of anonymity through a multi-party protocol with democratic checks and balances. We analyze several
+CFT design variants and present conservative performance estimates based on state-of-the-art cryptographic primitives,
+demonstrating that practical, privacy-preserving accountability mechanisms are within reach.
+
 ## Revocation of Credentials
 
 <img src="images/Accumulators-applied-to-eID.png" width="600" />
