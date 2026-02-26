@@ -52,6 +52,7 @@ a direct contribution to enhancing the security of the upcoming Swiss e-ID.
 # Privacy Preservation
 
 ## Accountability for Anonymous Credentials
+<img src="images/Transferability-attack.png" width="850" />
 
 Anonymous credential systems have been a subject of research for decades but have seen limited adoption in practical deployments.
 With the rise of national electronic identity frameworks in the EU and Switzerland, this may change soon. 
