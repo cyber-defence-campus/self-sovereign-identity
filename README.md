@@ -152,7 +152,6 @@ the use in the Swiss e-ID base registry.
 📄💻 [Full report and sourcecode](https://github.com/luffa99/KERI-Under-Scrutiny-Master-Thesis/)
 
 ## KERI: A Security Analysis
-<img src="images/Attacks-against-controller.png" width="600" />
 
 This work describes KERI and analyzes the security
 properties it provides to its users both in the role of controllers and of
