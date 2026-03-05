@@ -115,7 +115,7 @@ practical with current technologies for reasonably complex statements,
 such as validating a credential, while future research is very likely to
 allow for much more complex verification logic.
 
-📄💻 [Full report and sourcode](https://github.com/mombelld/general-purpose-zkps-vcs)
+📄💻 [Full report and sourcecode](https://github.com/mombelld/general-purpose-zkps-vcs)
 
 # Distributed Key and Trust Management
 
