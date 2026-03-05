@@ -90,7 +90,7 @@ of the proposed scheme is not limited to the Swiss e-ID instance
 but could also be extended to multi-national e-ID systems, such as those in
 the European Union.
 
-📄💻 [Full report and sourcode](https://github.com/alecolo129/eid-revocation-rs)
+📄💻 [Full report and sourcecode](https://github.com/alecolo129/eid-revocation-rs)
 
 
 ## Presentation of Credentials
