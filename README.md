@@ -48,6 +48,25 @@ a direct contribution to enhancing the security of the upcoming Swiss e-ID.
 * 📄 [Full report](https://github.com/user-attachments/files/21157739/Security_Analysis_of_the_Swiss_e_ID___Trust_Infrastructure.pdf)
 * ▶️ [Presentation in public e-ID participation meeting from July 2025 (YouTube)](https://youtu.be/ASgnpElZsk0?si=IzKH53iatFxuzroD&t=2663)
 
+## SWIYU Wallet
+<img src="images/Injecting-images-in-android-emulator.png" width="600" />
+
+This thesis evaluated the security of the Swiss e-ID mobile wallet, swiyu, with a specific focus
+on the Android platform. 
+The investigation into credential storage revealed that device binding is breakable on certain
+devices. By utilising rooted Android emulators, it was demonstrated that private key material
+could be successfully extracted from the Android keystore. Additionally, a vulnerability was
+identified in which credentials were not stored in hardware-bound storage, instead defaulting
+to software-bound storage. 
+Furthermore, the study confirmed that the current infrastructure is susceptible to automated
+abuse of anonymous age-check verifications on behalf of a third party. This was successfully
+demonstrated in a proof-of-concept. By integrating an automated emulator environment,
+the service performed anonymous age verifications on behalf of third parties, achieving a
+throughput of three to four verifications per minute. This demonstrates that, without protocols
+requiring physical proximity, the system enables scalable remote exploitation. 
+
+* 📄 [Full report](https://github.com/cyber-defence-campus/self-sovereign-identity/blob/main/reports/Security_Analysis_of_Mobile_e_ID_Wallet_Applications-2025.pdf)
+
 
 # Privacy Preservation
 
