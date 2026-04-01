@@ -51,7 +51,7 @@ a direct contribution to enhancing the security of the upcoming Swiss e-ID.
 ## SWIYU Wallet
 <img src="images/Injecting-images-in-android-emulator.png" width="600" />
 
-This thesis evaluated the security of the Swiss e-ID mobile wallet, swiyu, with a specific focus
+This thesis evaluated the security of the Swiss e-ID mobile wallet (beta version), swiyu, with a specific focus
 on the Android platform. 
 The investigation into credential storage revealed that device binding is breakable on certain
 devices. By utilising rooted Android emulators, it was demonstrated that private key material
