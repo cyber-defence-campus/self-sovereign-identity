@@ -55,9 +55,7 @@ This thesis evaluated the security of the Swiss e-ID mobile wallet, swiyu, with 
 on the Android platform. 
 The investigation into credential storage revealed that device binding is breakable on certain
 devices. By utilising rooted Android emulators, it was demonstrated that private key material
-could be successfully extracted from the Android keystore. Additionally, a vulnerability was
-identified in which credentials were not stored in hardware-bound storage, instead defaulting
-to software-bound storage. 
+could be successfully extracted from the Android keystore with software-bound storage. 
 Furthermore, the study confirmed that the current infrastructure is susceptible to automated
 abuse of anonymous age-check verifications on behalf of a third party. This was successfully
 demonstrated in a proof-of-concept. By integrating an automated emulator environment,
