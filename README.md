@@ -65,7 +65,7 @@ the service performed anonymous age verifications on behalf of third parties, ac
 throughput of three to four verifications per minute. This demonstrates that, without protocols
 requiring physical proximity, the system enables scalable remote exploitation. 
 
-* 📄 [Full report](https://github.com/cyber-defence-campus/self-sovereign-identity/blob/main/reports/Security_Analysis_of_Mobile_e_ID_Wallet_Applications-2025.pdf)
+📄 [Full report](https://github.com/cyber-defence-campus/self-sovereign-identity/blob/main/reports/Security_Analysis_of_Mobile_e_ID_Wallet_Applications-2025.pdf)
 
 
 # Privacy Preservation
