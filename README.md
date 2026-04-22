@@ -49,7 +49,9 @@ a direct contribution to enhancing the security of the upcoming Swiss e-ID.
 * ▶️ [Presentation in public e-ID participation meeting from July 2025 (YouTube)](https://youtu.be/ASgnpElZsk0?si=IzKH53iatFxuzroD&t=2663)
 
 ## SWIYU Wallet
+<!--
 <img src="images/Injecting-images-in-android-emulator.png" width="600" />
+-->
 
 This thesis evaluated the security of the Swiss e-ID mobile wallet (beta version), swiyu, with a specific focus
 on the Android platform. 
@@ -111,8 +113,9 @@ the European Union.
 
 
 ## Presentation of Credentials
-
+<!--
 <img src="images/Proving-Code-Execution-with-ZKP.png" width="800" />
+-->
 
 In this thesis, we study the feasibility of
 implementing flexible, privacy-preserving verification logic for anonymous
@@ -154,7 +157,9 @@ a novel multi-layered secret sharing scheme that mitigates the overhead due to t
 
 
 ## KERI: A Use-Case Study for the Swiss e-ID
+<!--
 <img src="images/E-ID-network-using-KERI.png" width="600" />
+-->
 
 This thesis presents an overview and an analysis of the distributed key
 management system KERI (Key Event Receipt Infrastructure) and its
