@@ -25,6 +25,10 @@ Key management is the foundation of secure distributed systems. Social key recov
 Moreover, [KERI](https://keri.one/) (Key Event Receipt Infrastructure), a fully decentralized identity system, is analyzed in terms of use cases and security. In KERI, keys are controlled by users and 
 a system of witnesses and watchers enables users to manage trust in a distributed way.
 
+**[Use Cases](#use-cases)**
+
+National digital identity systems aim at providing an ecosystem of digital credentials, covering sector-specific use cases in health, finance, education, etc. We explore how the technology could be used to implement a security-critical credential: an electronic personnel security clearance  (e-PSP). 
+
 ## Contact
 For questions, collaborations, or access to additional materials, please contact us through cydcampus@ar.admin.ch
 
@@ -191,4 +195,13 @@ guarantees. Some of its ideas and philosophy can however be integrated
 into the system to fulfill the requirements set by the Swiss federation.
 
 📄 [Full report](https://doi.org/10.3929/ethz-b-000735690)
+
+# Use Cases
+
+## Proof-of-Concept for an Electronic Personnel Security Clearance (e-PSP)
+Personnel Security Clearances (PSPs) are high-trust credentials vital to Swiss national security. Despite the comprehensive background checks and regulations they are based on, their real-life verification process is often lacking or vulnerable. The emergence of SWIYU, the Swiss national trust infrastructure, presents a timely opportunity to modernize this imperfect system by transitioning to verifiable digital credentials (e-PSPs) built upon hybrid Self-Sovereign Identity (SSI) principles.
+The developed prototype can execute full credential lifecycles, covering issuance, revocation, and verification. The development and testing of the PoC also served as an active battle-test for SWIYU’s public beta, not only by generating actionable bug reports but by also being the first project to try multiple security-critical features in production.
+Yet, a broader socio-technical assessment reveals that Switzerland is not immediately ready for the universal adoption of SWIYU-based e-PSPs. Resolving open legal and operational questions, clarifying organizational responsibilities, and lowering public skepticism towards the technology are important prerequisites. Nevertheless, these current blockers do not invalidate the general idea. This research provides the analytical and engineering foundations required once Switzerland is ready to transfer its high-security credentials to a new era.
+
+📄 [Full report](https://www.utupub.fi/items/0f9e0f7a-7d16-4b64-88c2-c468e073c18c)
 
