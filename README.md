@@ -90,7 +90,9 @@ revocation of anonymity through a multi-party protocol with democratic checks an
 CFT protocols based on state-of-the-art cryptographic primitives,
 demonstrating that practical, privacy-preserving accountability is possible.
 
-📄 [Full report](https://eprint.iacr.org/2026/389)
+* 📄 [Full report](https://eprint.iacr.org/2026/389)
+* 📄 [Slides (PDF)](https://github.com/cyber-defence-campus/self-sovereign-identity/blob/main/reports/Frontdoors-not-Backdoors-Slides-2026-06.pdf)
+
 
 
 ## Revocation of Credentials
