@@ -35,41 +35,10 @@ For questions, collaborations, or access to additional materials, please contact
 
 # Security Testing 
 
-## SWIYU Infrastructure
-<img src="images/forge_credential_mindmap.png" width="800" />
-
-This thesis conducts a rigorous security analysis of the Swiss trust infrastructure.
-In particular, we develop a threat model for each component of the ecosystem and attack
-trees for the most essential security goals. The attack trees are then used to guide the source code
-analysis for vulnerability detection. Although the European Union is currently working on a similar
-project, to our knowledge, there have been no noteworthy research studies that have performed
-systematic security analysis of such nationwide SSI implementations with a centralized registry. We
-found more than 90 vulnerabilities and supported their remediation in direct collaboration with the
-development team. More than half of our findings have already been fixed or accepted for public
-beta. The development team is currently working on the other, still open, findings. This thesis makes
-a direct contribution to enhancing the security of the upcoming Swiss e-ID.
-
-* 📄 [Full report](https://github.com/user-attachments/files/21157739/Security_Analysis_of_the_Swiss_e_ID___Trust_Infrastructure.pdf)
-* ▶️ [Presentation in public e-ID participation meeting from July 2025 (YouTube)](https://youtu.be/ASgnpElZsk0?si=IzKH53iatFxuzroD&t=2663)
-
-## SWIYU Wallet
-<!--
-<img src="images/Injecting-images-in-android-emulator.png" width="600" />
--->
-
-This thesis evaluated the security of the Swiss e-ID mobile wallet (beta version), swiyu, with a specific focus
-on the Android platform. 
-The investigation into credential storage revealed that device binding is breakable on certain
-devices. By utilising rooted Android emulators, it was demonstrated that private key material
-could be successfully extracted from the Android keystore with software-bound storage. 
-Furthermore, the study confirmed that the current infrastructure is susceptible to automated
-abuse of anonymous age-check verifications on behalf of a third party. This was successfully
-demonstrated in a proof-of-concept. By integrating an automated emulator environment,
-the service performed anonymous age verifications on behalf of third parties, achieving a
-throughput of three to four verifications per minute. This demonstrates that, without protocols
-requiring physical proximity, the system enables scalable remote exploitation. 
-
-📄 [Full report](https://github.com/cyber-defence-campus/self-sovereign-identity/blob/main/reports/Security_Analysis_of_Mobile_e_ID_Wallet_Applications-2025.pdf)
+| Title | Description | Links | 
+| -------- | -------- | -------- |
+| SWIYU Infrastructure | A rigorous security analysis of the Swiss trust infrastructure. | 📄 [Full report](https://github.com/user-attachments/files/21157739/Security_Analysis_of_the_Swiss_e_ID___Trust_Infrastructure.pdf),  ▶️ [Presentation in e-ID participation meeting (July 2025)](https://youtu.be/ASgnpElZsk0?si=IzKH53iatFxuzroD&t=2663) |
+| SWIYU Wallet | Evaluation of the security of the Swiss e-ID mobile wallet (beta version), swiyu, with a specific focus on the Android platform.  | 📄 [Full report](https://github.com/cyber-defence-campus/self-sovereign-identity/blob/main/reports/Security_Analysis_of_Mobile_e_ID_Wallet_Applications-2025.pdf) |
 
 
 # Privacy Preservation
