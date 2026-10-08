@@ -3,37 +3,15 @@ This repository presents research at the [Cyber-Defence Campus](https://www.cydc
 
 Our work covers important challenges across the SSI stack: key recovery for identity vaults, security testing of national e-ID infrastructures, privacy-preserving credential revocation and presentation, and distributed key and trust management. Several projects are evaluated at scale or directly applied to the Swiss e-ID ecosystem. Together, our efforts identify practical limitations of current approaches and inform the design of future national and cross-border digital identity systems.
 
-## Focus Topics
-
-**[Security Testing](#security-testing)**  
-
-Security testing involves threat modeling, creation of attack trees, and vulnerability analysis of the Swiss e-ID trust infrastructure.
-We scrutinized the security of protocols, implementations and mobile platforms. 
-
-
-**[Privacy Preservation](#privacy-preservation)**  
-
-Unlinkability of credential presentations is an important goal in the design of verifiable credential systems. That is, verifiers must not be
-able to determine whether two anonymous credential presentations, e.g., proving legal age, belong to the same user or not. 
-An even stronger notion of unlinkability retains anonymity of users even if issuers and verifiers collude to deanonymize presentations.
-Achieving unlinkability is challenging, because static public keys, hashes, signatures or network metadata typically allow tracking of users across different credential presentations.
-
-
-**[Distributed Key and Trust Management](#distributed-key-and-trust-management)**
-
-Key management is the foundation of secure distributed systems. Social key recovery mechanisms are studied and the *Apollo* framework for usable and privacy-preserving vault recovery is presented.
-Moreover, [KERI](https://keri.one/) (Key Event Receipt Infrastructure), a fully decentralized identity system, is analyzed in terms of use cases and security. In KERI, keys are controlled by users and 
-a system of witnesses and watchers enables users to manage trust in a distributed way.
-
-**[Use Cases](#use-cases)**
-
-National digital identity systems aim at providing an ecosystem of digital credentials, covering sector-specific use cases in health, finance, education, etc. We explore how the technology could be used to implement a security-critical credential: an electronic personnel security clearance  (e-PSP). 
 
 ## Contact
 For questions, collaborations, or access to additional materials, please contact us through cydcampus@ar.admin.ch
 
 
 # Security Testing 
+Security testing involves threat modeling, creation of attack trees, and vulnerability analysis of the Swiss e-ID trust infrastructure.
+We scrutinized the security of protocols, implementations and mobile platforms. 
+
 
 | Title | Description | Links | 
 | -------- | -------- | -------- |
@@ -42,77 +20,22 @@ For questions, collaborations, or access to additional materials, please contact
 
 
 # Privacy Preservation
+Unlinkability of credential presentations is an important goal in the design of verifiable credential systems. That is, verifiers must not be
+able to determine whether two anonymous credential presentations, e.g., proving legal age, belong to the same user or not. 
+An even stronger notion of unlinkability retains anonymity of users even if issuers and verifiers collude to deanonymize presentations.
+Achieving unlinkability is challenging, because static public keys, hashes, signatures or network metadata typically allow tracking of users across different credential presentations.
 
-## Accountable Anonymity for National Digital Identity
-<img src="images/CFT-overview.png" width="900" />
-
-Anonymous credential systems have been a subject of research for decades but have seen limited adoption in practical deployments.
-With the rise of national electronic identity frameworks in the EU and Switzerland, this may change soon. 
-Achieving perfect unlinkability — resilient even
-against collusion between issuers and verifiers—remains an open challenge in practice, constrained by current performance
-and standardization limitations. However, these barriers are likely to diminish as the technology matures.
-Once unlinkability approaches this ideal, a new challenge becomes central: accountability. Fully unlinkable systems can
-be misused, for example, by malicious users reselling identity proofs. We argue that accountability must be an integral part
-of system design to preempt political pressures to weaken privacy guarantees for all citizens.
-To address this, we introduce the cryptographic forensic trail (CFT), a mechanism enabling controlled and transparent
-revocation of anonymity through a multi-party protocol with democratic checks and balances. We design, implement, and evaluate several
-CFT protocols based on state-of-the-art cryptographic primitives,
-demonstrating that practical, privacy-preserving accountability is possible.
-
-* 📄 [Full report](https://eprint.iacr.org/2026/389)
-* 📄 [Slides (PDF)](https://github.com/cyber-defence-campus/self-sovereign-identity/blob/main/reports/Frontdoors-not-Backdoors-Slides-2026-06.pdf)
-
-
-
-## Revocation of Credentials
-
-<img src="images/Accumulators-applied-to-eID.png" width="600" />
-
-Verifiable credentials allow holders to selectively disclose the information
-they wish to share, and ensure that subsequent disclosures remain
-unlinkable.
-In certain circumstances, governments may need to revoke some e-ID
-credentials, such as when the credential’s hosting device is lost or stolen,
-in cases of criminal prosecution, or if the security of the issuer has been
-compromised. Popular list-based revocation-approaches are not privacy-preserving,
-as they require the disclosure of unique identifiers, while unlinkable
-approaches are not practical enough for adoption in e-ID systems.
-In this thesis, we address the challenge of revoking verifiable credentials
-by proposing a privacy-preserving revocation scheme based on cryptographic
-accumulators, designed to be scalable for national e-ID systems. The scalability
-of the proposed scheme is not limited to the Swiss e-ID instance
-but could also be extended to multi-national e-ID systems, such as those in
-the European Union.
-
-📄💻 [Full report and sourcecode](https://github.com/alecolo129/eid-revocation-rs)
-
-
-## Presentation of Credentials
-<!--
-<img src="images/Proving-Code-Execution-with-ZKP.png" width="800" />
--->
-
-In this thesis, we study the feasibility of
-implementing flexible, privacy-preserving verification logic for anonymous
-credentials using general-purpose zero-knowledge proofs. We
-provide an overview, comparison, and performance analysis of state-of-
-the-art zero-knowledge frameworks, and we design flexible credential
-verification logic using arithmetic circuits. We then implement a
-proof-of-concept framework for anonymous credentials based on zk-
-SNARKs and integrate it into the Swiss e-ID infrastructure. Our work
-highlights the flexibility of this approach, for example, we can seamlessly
-prove properties of values that were computed, or aggregated,
-from claims of multiple linked credentials. We also uncover issues and
-limitations of current zero-knowledge frameworks, especially regarding
-performance. For these, we indicate possible ways in which they
-could be addressed by future work. We show that this approach is
-practical with current technologies for reasonably complex statements,
-such as validating a credential, while future research is very likely to
-allow for much more complex verification logic.
-
-📄💻 [Full report and sourcecode](https://github.com/mombelld/general-purpose-zkps-vcs)
+| Title | Description | Links | 
+| -------- | -------- | -------- |
+| Accountable Anonymity for National Digital Identity | We introduce the cryptographic forensic trail (CFT), a mechanism enabling controlled and transparent revocation of anonymity through a multi-party protocol with democratic checks and balances. | 📄 [Full report](https://eprint.iacr.org/2026/389), 📄 [Slides (PDF)](https://github.com/cyber-defence-campus/self-sovereign-identity/blob/main/reports/Frontdoors-not-Backdoors-Slides-2026-06.pdf) |
+| Revocation of Credentials | We address the challenge of revoking verifiable credentials by proposing a privacy-preserving revocation scheme based on cryptographic accumulators, designed to be scalable for national e-ID systems. | 💻 [Full report and sourcecode](https://github.com/alecolo129/eid-revocation-rs) |
+| Presentation of Credentials  | We study the feasibility of implementing flexible, privacy-preserving verification logic for anonymous credentials using general-purpose zero-knowledge proofs. | 💻 [Full report and sourcecode](https://github.com/mombelld/general-purpose-zkps-vcs) |
 
 # Distributed Key and Trust Management
+Key management is the foundation of secure distributed systems. Social key recovery mechanisms are studied and the *Apollo* framework for usable and privacy-preserving vault recovery is presented.
+Moreover, [KERI](https://keri.one/) (Key Event Receipt Infrastructure), a fully decentralized identity system, is analyzed in terms of use cases and security. In KERI, keys are controlled by users and 
+a system of witnesses and watchers enables users to manage trust in a distributed way.
+
 
 ## Social Vault Recovery with Apollo
 <img src="images/Apollo-Overview.png" width="600" />
@@ -168,6 +91,7 @@ into the system to fulfill the requirements set by the Swiss federation.
 📄 [Full report](https://doi.org/10.3929/ethz-b-000735690)
 
 # Use Cases
+National digital identity systems aim at providing an ecosystem of digital credentials, covering sector-specific use cases in health, finance, education, etc. We explore how the technology could be used to implement a security-critical credential: an electronic personnel security clearance  (e-PSP). 
 
 ## Proof-of-Concept for an Electronic Personnel Security Clearance (e-PSP)
 Personnel Security Clearances (PSPs) are high-trust credentials vital to Swiss national security. Despite the comprehensive background checks and regulations they are based on, their real-life verification process is often lacking or vulnerable. The emergence of SWIYU, the Swiss national trust infrastructure, presents a timely opportunity to modernize this imperfect system by transitioning to verifiable digital credentials (e-PSPs) built upon hybrid Self-Sovereign Identity (SSI) principles.
